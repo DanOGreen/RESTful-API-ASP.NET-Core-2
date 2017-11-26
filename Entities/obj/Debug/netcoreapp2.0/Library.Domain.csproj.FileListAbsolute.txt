@@ -1,0 +1,9 @@
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\bin\Debug\netcoreapp2.0\Library.Domain.deps.json
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\bin\Debug\netcoreapp2.0\Library.Domain.dll
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\bin\Debug\netcoreapp2.0\Library.Domain.pdb
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\obj\Debug\netcoreapp2.0\Library.Domain.csprojResolveAssemblyReference.cache
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\obj\Debug\netcoreapp2.0\Library.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\obj\Debug\netcoreapp2.0\Library.Domain.AssemblyInfoInputs.cache
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\obj\Debug\netcoreapp2.0\Library.Domain.AssemblyInfo.cs
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\obj\Debug\netcoreapp2.0\Library.Domain.dll
+C:\Projects\Dev\ASP.NET Core\Library.API\Entities\obj\Debug\netcoreapp2.0\Library.Domain.pdb
