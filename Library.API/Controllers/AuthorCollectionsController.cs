@@ -8,6 +8,7 @@ using Library.API.Models;
 using AutoMapper;
 using Entities.Entities;
 using Library.API.Helpers;
+using Microsoft.AspNetCore.Http;
 
 namespace Library.API.Controllers
 {
@@ -46,7 +47,7 @@ namespace Library.API.Controllers
         }
 
         [HttpGet("{ids}",Name ="GetAuthorCollection")]
-        public IActionResult GetAuthorCollections([ModelBinder(BinderType = typeof(ArrayModelBinder)]IEnumerable<Guid> ids)
+        public IActionResult GetAuthorCollections([ModelBinder(BinderType = typeof(ArrayModelBinder))]IEnumerable<Guid> ids)
         {
             if(ids == null)
             {
@@ -64,5 +65,7 @@ namespace Library.API.Controllers
             var authorsToReturn = Mapper.Map<IEnumerable<AuthorDto>>(authorEntities);
             return Ok(authorsToReturn);
         }
+
+        
     }
 }

@@ -8,23 +8,24 @@ using Library.API.Models;
 using Library.API.Helpers;
 using AutoMapper;
 using Entities.Entities;
+using Microsoft.AspNetCore.Http;
 
 namespace Library.API.Controllers
 {
     [Route("api/authors")]
     public class AuthorsController : Controller
     {
-        private readonly ILibraryRepository libaryRepository;
+        private readonly ILibraryRepository libraryRepository;
 
-        public AuthorsController(ILibraryRepository libaryRepository)
+        public AuthorsController(ILibraryRepository libraryRepository)
         {
-            this.libaryRepository = libaryRepository;
+            this.libraryRepository = libraryRepository;
         }
 
         [HttpGet()]
         public IActionResult GetAuthors()
         {
-            var authorsFromRepo = libaryRepository.GetAuthors();
+            var authorsFromRepo = libraryRepository.GetAuthors();
 
             var authors = Mapper.Map<IEnumerable<AuthorDto>>(authorsFromRepo);
             return Ok(authors);
@@ -33,7 +34,7 @@ namespace Library.API.Controllers
         [HttpGet("{id}", Name ="GetAuthor")]
         public IActionResult GetAuthor(Guid id)
         {            
-            var authorFromRepo = libaryRepository.GetAuthor(id);
+            var authorFromRepo = libraryRepository.GetAuthor(id);
             
             if(authorFromRepo == null)
             {
@@ -54,8 +55,8 @@ namespace Library.API.Controllers
 
             var authorEntity = Mapper.Map<Author>(author);
 
-            libaryRepository.AddAuthor(authorEntity);
-            if (!libaryRepository.Save())
+            libraryRepository.AddAuthor(authorEntity);
+            if (!libraryRepository.Save())
             {
                 throw new Exception("Creating an author failed on save");
                 //return StatusCode(500, "A problem happened with handling your request");
@@ -63,6 +64,35 @@ namespace Library.API.Controllers
 
             var authorToReturn = Mapper.Map<AuthorDto>(authorEntity);
             return CreatedAtRoute("GetAuthor", new { id = authorToReturn.Id });
+        }
+
+        [HttpPost("{id}")]
+        public IActionResult BlockAuthorCreation(Guid id)
+        {
+            if (libraryRepository.AuthorExists(id))
+            {
+                return new StatusCodeResult(StatusCodes.Status409Conflict);
+            }
+            return NotFound();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteAuthor(Guid id)
+        {
+            var authorFromRepo = libraryRepository.GetAuthor(id);
+            if(authorFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            libraryRepository.DeleteAuthor(authorFromRepo);
+
+            if (!libraryRepository.Save())
+            {
+                throw new Exception($"Deleting author {id} failed on save");
+            }
+
+            return NoContent();
         }
     }
 }

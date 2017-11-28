@@ -34,6 +34,7 @@ namespace Library.API
             {
                 setupAction.ReturnHttpNotAcceptable = true;
                 setupAction.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
+                setupAction.InputFormatters.Add(new XmlDataContractSerializerInputFormatter());
             });
             services.AddDbContext<LibraryContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("LibraryDbConnection")));
             services.AddScoped<ILibraryRepository, LibraryRepository>();
@@ -72,7 +73,7 @@ namespace Library.API
                 config.CreateMap<BookCreationDto, Book>();
             });
             libraryContext.Database.Migrate();
-            //libraryContext.EnsureSeedDataForContext();
+            libraryContext.EnsureSeedDataForContext();
 
 
             app.UseMvc();

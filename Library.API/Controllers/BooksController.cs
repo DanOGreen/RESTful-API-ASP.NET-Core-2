@@ -34,14 +34,14 @@ namespace Library.API.Controllers
             return Ok(booksForAuthorfromRepo);
         }
 
-        [HttpGet("{id}", Name ="GetBookForAuthor")]
+        [HttpGet("{id}", Name = "GetBookForAuthor")]
         public IActionResult GetBookForAuuthor(Guid authorId, Guid id)
         {
             if (!libraryRepository.AuthorExists(authorId))
             {
                 return NotFound();
             }
-            var bookForAuthorfromRepo = libraryRepository.GetBookForAuthor(authorId,id);
+            var bookForAuthorfromRepo = libraryRepository.GetBookForAuthor(authorId, id);
 
 
             Mapper.Map<BookDto>(bookForAuthorfromRepo);
@@ -52,7 +52,7 @@ namespace Library.API.Controllers
         [HttpPost]
         public IActionResult CreateBookForAuthor(Guid authorId, [FromBody] BookCreationDto book)
         {
-            if(book == null)
+            if (book == null)
             {
                 return BadRequest();
             }
@@ -72,6 +72,28 @@ namespace Library.API.Controllers
             var bookToReturn = Mapper.Map<BookDto>(bookEntity);
 
             return CreatedAtRoute("GetBookForAuthor", new { authorId = authorId, id = bookToReturn.Id }, bookToReturn);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBookForAuthor(Guid authorId, Guid id)
+        {
+            if (!libraryRepository.AuthorExists(authorId))
+            {
+                return NotFound();
+            }
+            var bookForAuthorFromRepo = libraryRepository.GetBookForAuthor(authorId, id);
+            if(bookForAuthorFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            libraryRepository.DeleteBook(bookForAuthorFromRepo);
+            if (!libraryRepository.Save())
+            {
+                throw new Exception($"Deleting book {id} for author {authorId} failed on save");
+            }
+
+            return NoContent();
         }
 
     }
