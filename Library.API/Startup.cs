@@ -71,6 +71,8 @@ namespace Library.API
                 config.CreateMap<AuthorCreationDto, Author>();
 
                 config.CreateMap<BookCreationDto, Book>();
+
+                config.CreateMap<BookForUpdateDto, Book>();
             });
             libraryContext.Database.Migrate();
             libraryContext.EnsureSeedDataForContext();
