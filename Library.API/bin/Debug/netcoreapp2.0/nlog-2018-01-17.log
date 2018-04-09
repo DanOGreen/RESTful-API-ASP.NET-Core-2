@@ -1,0 +1,182 @@
+2018-01-17 21:18:34.7208||Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|INFO|User profile is available. Using 'C:\Users\DGreen\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2018-01-17 21:18:35.2209||Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|INFO|Creating key {8ca8a9f2-d0cf-4b56-a6c2-983fb3852d45} with creation date 2018-01-18 02:18:35Z, activation date 2018-01-18 02:18:34Z, and expiration date 2018-04-18 02:18:34Z. 
+2018-01-17 21:18:35.2972||Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|INFO|Writing data to file 'C:\Users\DGreen\AppData\Local\ASP.NET\DataProtection-Keys\key-8ca8a9f2-d0cf-4b56-a6c2-983fb3852d45.xml'. 
+2018-01-17 21:18:38.3335||Microsoft.EntityFrameworkCore.Infrastructure|INFO|Entity Framework Core 2.0.1-rtm-125 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2018-01-17 21:18:39.1994||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (373ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:18:39.2065||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:18:39.3686||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (74ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2018-01-17 21:18:39.4069||Microsoft.EntityFrameworkCore.Migrations|INFO|No migrations were applied. The database is already up to date. 
+2018-01-17 21:18:40.6299||Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (123ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[DateOfDeath], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a] Invalid column name 'DateOfDeath'.
+2018-01-17 21:18:40.8326||Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred in the database while iterating the results of a query for context type 'Entities.Entities.LibraryContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateOfDeath'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__17`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:2980ba6e-5d1b-4959-9b86-7c60eeaef00b
+Error Number:207,State:1,Class:16 Invalid column name 'DateOfDeath'.
+2018-01-17 21:19:00.7449||Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|INFO|User profile is available. Using 'C:\Users\DGreen\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2018-01-17 21:19:03.7872||Microsoft.EntityFrameworkCore.Infrastructure|INFO|Entity Framework Core 2.0.1-rtm-125 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2018-01-17 21:19:04.0681||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:19:04.0830||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:19:04.1392||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2018-01-17 21:19:04.1855||Microsoft.EntityFrameworkCore.Migrations|INFO|No migrations were applied. The database is already up to date. 
+2018-01-17 21:19:04.8151||Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[DateOfDeath], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a] Invalid column name 'DateOfDeath'.
+2018-01-17 21:19:04.9502||Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred in the database while iterating the results of a query for context type 'Entities.Entities.LibraryContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateOfDeath'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__17`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:3a0c7afd-758d-49e8-80b0-99d850b8b449
+Error Number:207,State:1,Class:16 Invalid column name 'DateOfDeath'.
+2018-01-17 21:21:08.5810||Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|INFO|User profile is available. Using 'C:\Users\DGreen\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2018-01-17 21:21:11.1253||Microsoft.EntityFrameworkCore.Infrastructure|INFO|Entity Framework Core 2.0.1-rtm-125 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2018-01-17 21:21:11.3781||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:21:11.3781||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:21:11.4352||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2018-01-17 21:21:11.4731||Microsoft.EntityFrameworkCore.Migrations|INFO|No migrations were applied. The database is already up to date. 
+2018-01-17 21:21:12.1349||Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[DateOfDeath], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a] Invalid column name 'DateOfDeath'.
+2018-01-17 21:21:12.2339||Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred in the database while iterating the results of a query for context type 'Entities.Entities.LibraryContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateOfDeath'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__17`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:0481f160-1390-47de-906b-ab5c85917c1d
+Error Number:207,State:1,Class:16 Invalid column name 'DateOfDeath'.
+2018-01-17 21:35:11.6234||Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|INFO|User profile is available. Using 'C:\Users\DGreen\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2018-01-17 21:35:14.1844||Microsoft.EntityFrameworkCore.Infrastructure|INFO|Entity Framework Core 2.0.1-rtm-125 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2018-01-17 21:35:14.3945||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:35:14.3945||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:35:14.4458||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2018-01-17 21:35:14.4765||Microsoft.EntityFrameworkCore.Migrations|INFO|No migrations were applied. The database is already up to date. 
+2018-01-17 21:35:15.0263||Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[DateOfDeath], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a] Invalid column name 'DateOfDeath'.
+2018-01-17 21:35:15.1266||Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred in the database while iterating the results of a query for context type 'Entities.Entities.LibraryContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateOfDeath'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__17`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:a5aec939-5d8d-4949-8374-d7dd44930c9b
+Error Number:207,State:1,Class:16 Invalid column name 'DateOfDeath'.
+2018-01-17 21:43:22.4102||Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|INFO|User profile is available. Using 'C:\Users\DGreen\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2018-01-17 21:43:24.8874||Microsoft.EntityFrameworkCore.Infrastructure|INFO|Entity Framework Core 2.0.1-rtm-125 initialized 'LibraryContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None 
+2018-01-17 21:43:25.1045||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:43:25.1142||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'__EFMigrationsHistory'); 
+2018-01-17 21:43:25.1571||Microsoft.EntityFrameworkCore.Database.Command|INFO|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2018-01-17 21:43:25.1908||Microsoft.EntityFrameworkCore.Migrations|INFO|No migrations were applied. The database is already up to date. 
+2018-01-17 21:43:25.7342||Microsoft.EntityFrameworkCore.Database.Command|ERROR|Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[DateOfBirth], [a].[DateOfDeath], [a].[FirstName], [a].[Genre], [a].[LastName]
+FROM [Authors] AS [a] Invalid column name 'DateOfDeath'.
+2018-01-17 21:43:25.8106||Microsoft.EntityFrameworkCore.Query|ERROR|An exception occurred in the database while iterating the results of a query for context type 'Entities.Entities.LibraryContext'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'DateOfDeath'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__17`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:f4c5fe3f-4252-44e3-acc3-51dad7bc8732
+Error Number:207,State:1,Class:16 Invalid column name 'DateOfDeath'.

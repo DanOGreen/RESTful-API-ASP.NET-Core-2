@@ -10,14 +10,14 @@ namespace Library.API.Controllers
     public class ValuesController : Controller
     {
         // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
         // GET api/values/5
-        [HttpGet("{id}")]
+        [HttpGet]
         public string Get(int id)
         {
             return "value";
@@ -25,8 +25,9 @@ namespace Library.API.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public string Get(int id,int value=0)
         {
+            return "integer";
         }
 
         // PUT api/values/5

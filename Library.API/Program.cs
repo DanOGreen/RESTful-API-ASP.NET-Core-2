@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using NLog.Web;
 
 namespace Library.API
 {
@@ -19,11 +20,17 @@ namespace Library.API
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration((builderContext, config) =>
-            {
-                config.AddJsonFile("appconfig.json", optional: true, reloadOnChange: true);
-            })
                 .UseStartup<Startup>()
                 .Build();
+
+        //public static IWebHost BuildWebHost(string[] args) =>
+        //    WebHost.CreateDefaultBuilder(args)
+        //        .ConfigureAppConfiguration((builderContext, config) =>
+        //        {
+        //            config.AddJsonFile("appconfig.json", optional: true, reloadOnChange: true);
+        //        })
+        //        .UseStartup<Startup>()
+        //        .UseNLog()
+        //        .Build();
     }
 }

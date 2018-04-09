@@ -13,3 +13,34 @@ C:\Projects\Dev\ASP.NET Core\Library.API\Library.API\bin\Debug\netcoreapp2.0\Lib
 C:\Projects\Dev\ASP.NET Core\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.Service.pdb
 C:\Projects\Dev\ASP.NET Core\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.dll
 C:\Projects\Dev\ASP.NET Core\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.pdb
+C:\Projects\Dev\ASP.NET Core\Library.API\Library.API\bin\Debug\netcoreapp2.0\nlog.config
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\nlog.config
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.deps.json
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.runtimeconfig.json
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.runtimeconfig.dev.json
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.dll
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.pdb
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.Domain.dll
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.Service.dll
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.Shared.dll
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.Domain.pdb
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.Service.pdb
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.Shared.pdb
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.csprojResolveAssemblyReference.cache
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.csproj.CoreCompileInputs.cache
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.AssemblyInfoInputs.cache
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.AssemblyInfo.cs
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.dll
+C:\Users\PPT-DEV-02\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.pdb
+C:\Users\DGreen\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\nlog.config
+C:\Users\DGreen\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.deps.json
+C:\Users\DGreen\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.runtimeconfig.json
+C:\Users\DGreen\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.runtimeconfig.dev.json
+C:\Users\DGreen\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.dll
+C:\Users\DGreen\OneDrive\Library.API\Library.API\bin\Debug\netcoreapp2.0\Library.API.pdb
+C:\Users\DGreen\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.csprojResolveAssemblyReference.cache
+C:\Users\DGreen\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.csproj.CoreCompileInputs.cache
+C:\Users\DGreen\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.AssemblyInfoInputs.cache
+C:\Users\DGreen\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.AssemblyInfo.cs
+C:\Users\DGreen\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.dll
+C:\Users\DGreen\OneDrive\Library.API\Library.API\obj\Debug\netcoreapp2.0\Library.API.pdb

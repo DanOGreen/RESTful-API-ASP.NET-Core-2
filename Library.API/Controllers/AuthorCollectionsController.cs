@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Library.Service.DataAccess;
 using Library.API.Models;
 using AutoMapper;
-using Entities.Entities;
+using Library.API.Entities;
 using Library.API.Helpers;
 using Microsoft.AspNetCore.Http;
+using ILibraryRepository = Library.API.Services.DataAccess.ILibraryRepository;
 
 namespace Library.API.Controllers
 {

@@ -3392,7 +3392,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DGreen\\.nuget\\packages\\": {},
+    "C:\\Users\\PPT-DEV-02\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -3401,17 +3401,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Entities\\Library.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\PPT-DEV-02\\OneDrive\\Library.API\\Entities\\Library.Domain.csproj",
       "projectName": "Library.Domain",
-      "projectPath": "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Entities\\Library.Domain.csproj",
-      "packagesPath": "C:\\Users\\DGreen\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\PPT-DEV-02\\OneDrive\\Library.API\\Entities\\Library.Domain.csproj",
+      "packagesPath": "C:\\Users\\PPT-DEV-02\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PPT-DEV-02\\OneDrive\\Library.API\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\DGreen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PPT-DEV-02\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3442,7 +3442,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {

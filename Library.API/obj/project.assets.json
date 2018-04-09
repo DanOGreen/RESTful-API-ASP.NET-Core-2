@@ -2893,6 +2893,45 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "NLog/4.5.0-rc01": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Extensions.Logging/1.0.0-rtm-rc3": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.0",
+          "NLog": "[4.5.0-rc01, 5.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        }
+      },
+      "NLog.Web.AspNetCore/4.5.0-rc1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.0",
+          "Microsoft.AspNetCore.Http": "2.0.0",
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.0",
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.0.0",
+          "NLog.Extensions.Logging": "1.0.0-rtm-rc3",
+          "System.ValueTuple": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {}
+        }
+      },
       "NuGet.Frameworks/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -3671,6 +3710,33 @@
           "ref/netstandard1.0/System.Diagnostics.Tools.dll": {}
         }
       },
+      "System.Diagnostics.TraceSource/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "runtime.native.System": "4.0.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Diagnostics.TraceSource.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Diagnostics.Tracing/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3866,6 +3932,29 @@
         },
         "runtime": {
           "lib/netstandard1.6/System.Linq.dll": {}
+        }
+      },
+      "System.Linq.Dynamic.Core/1.0.6.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections.Concurrent": "4.0.12",
+          "System.ComponentModel.TypeConverter": "4.1.0",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Dynamic.Runtime": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Linq.Expressions": "4.1.0",
+          "System.Linq.Queryable": "4.0.1",
+          "System.Reflection.Emit": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Linq.Dynamic.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Linq.Dynamic.Core.dll": {}
         }
       },
       "System.Linq.Expressions/4.3.0": {
@@ -5050,34 +5139,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
-        }
-      },
-      "Library.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
-          "Microsoft.EntityFrameworkCore.Tools": "2.0.1"
-        },
-        "compile": {
-          "bin/placeholder/Library.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Library.Domain.dll": {}
-        }
-      },
-      "Library.Service/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
-        "dependencies": {
-          "Library.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "2.0.1"
-        },
-        "compile": {
-          "bin/placeholder/Library.Service.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Library.Service.dll": {}
         }
       }
     }
@@ -8059,6 +8120,73 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
+    "NLog/4.5.0-rc01": {
+      "sha512": "YTTayN+/UvoXMk6uJ/91vMCPhRi758LPMfOoWXZ7tcPy1YX5sbGB6vCGntQbA7YoCL8mIsAM8Eq6gl9gqP7vgw==",
+      "type": "package",
+      "path": "nlog/4.5.0-rc01",
+      "files": [
+        "lib/monoandroid44/NLog.dll",
+        "lib/monoandroid44/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40-client/NLog.dll",
+        "lib/net40-client/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml",
+        "lib/xamarinios10/NLog.dll",
+        "lib/xamarinios10/NLog.xml",
+        "nlog.4.5.0-rc01.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
+    "NLog.Extensions.Logging/1.0.0-rtm-rc3": {
+      "sha512": "FWyNS/ypG6hi/GqUqAJL7IZSGQFQfdzKUTNbRgKMYmw1cXjpuiFQjoP32Pa58Gb2uLm7zvTCLPTNaPaxjRfjaw==",
+      "type": "package",
+      "path": "nlog.extensions.logging/1.0.0-rtm-rc3",
+      "files": [
+        "lib/net451/NLog.Extensions.Logging.dll",
+        "lib/net451/NLog.Extensions.Logging.xml",
+        "lib/net461/NLog.Extensions.Logging.dll",
+        "lib/net461/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.3/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.3/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.5/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.5/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.0/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.0/NLog.Extensions.Logging.xml",
+        "nlog.extensions.logging.1.0.0-rtm-rc3.nupkg.sha512",
+        "nlog.extensions.logging.nuspec"
+      ]
+    },
+    "NLog.Web.AspNetCore/4.5.0-rc1": {
+      "sha512": "VPYk1WVbYeeDkmV/i57ll5BSJM9v1O+HWEtXbKYC5HGqRKBvz821FmtftJONYgbkti5lAwP9fVfir1t7+sPbxQ==",
+      "type": "package",
+      "path": "nlog.web.aspnetcore/4.5.0-rc1",
+      "files": [
+        "lib/net451/NLog.Web.AspNetCore.dll",
+        "lib/net451/NLog.Web.AspNetCore.xml",
+        "lib/net461/NLog.Web.AspNetCore.dll",
+        "lib/net461/NLog.Web.AspNetCore.xml",
+        "lib/netstandard1.3/NLog.Web.AspNetCore.dll",
+        "lib/netstandard1.3/NLog.Web.AspNetCore.xml",
+        "lib/netstandard1.5/NLog.Web.AspNetCore.dll",
+        "lib/netstandard1.5/NLog.Web.AspNetCore.xml",
+        "lib/netstandard2.0/NLog.Web.AspNetCore.dll",
+        "lib/netstandard2.0/NLog.Web.AspNetCore.xml",
+        "nlog.web.aspnetcore.4.5.0-rc1.nupkg.sha512",
+        "nlog.web.aspnetcore.nuspec"
+      ]
+    },
     "NuGet.Frameworks/4.0.0": {
       "sha512": "WCkN68c8q+USG+Ot1MmBDH+9DUo5dk7UB0QDMiwCYhrH7ZoFLKFGGNzJ8C3LTR1DvB1LW9BOxKeznnZznKiCTA==",
       "type": "package",
@@ -9483,6 +9611,45 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
+    "System.Diagnostics.TraceSource/4.0.0": {
+      "sha512": "6WVCczFZKXwpWpzd/iJkYnsmWTSFFiU24Xx/YdHXBcu+nFI/ehTgeqdJQFbtRPzbrO3KtRNjvkhtj4t5/WwWsA==",
+      "type": "package",
+      "path": "system.diagnostics.tracesource/4.0.0",
+      "files": [
+        "System.Diagnostics.TraceSource.4.0.0.nupkg.sha512",
+        "System.Diagnostics.TraceSource.nuspec",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.TraceSource.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.TraceSource.dll",
+        "ref/netstandard1.3/System.Diagnostics.TraceSource.dll",
+        "ref/netstandard1.3/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.TraceSource.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll",
+        "runtimes/win/lib/net46/System.Diagnostics.TraceSource.dll",
+        "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll"
+      ]
+    },
     "System.Diagnostics.Tracing/4.3.0": {
       "sha512": "rswfv0f/Cqkh78rA5S8eN8Neocz234+emGCtTF3lxPY96F+mmmUen6tbn0glN6PMvlKQb9bPAY5e9u7fgPTkKw==",
       "type": "package",
@@ -10102,6 +10269,41 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "System.Linq.Dynamic.Core/1.0.6.8": {
+      "sha512": "u1DrK0pBff/hoZddYGeQoStOf05TVfQx4W0PSTVvLPRm12qZ2Vp4EXby9NbigHNIPuQN2SytweFSVyEsf/HlPQ==",
+      "type": "package",
+      "path": "system.linq.dynamic.core/1.0.6.8",
+      "files": [
+        "lib/net35/System.Linq.Dynamic.Core.dll",
+        "lib/net35/System.Linq.Dynamic.Core.xml",
+        "lib/net40/System.Linq.Dynamic.Core.dll",
+        "lib/net40/System.Linq.Dynamic.Core.xml",
+        "lib/net45/System.Linq.Dynamic.Core.dll",
+        "lib/net45/System.Linq.Dynamic.Core.xml",
+        "lib/net451/System.Linq.Dynamic.Core.dll",
+        "lib/net451/System.Linq.Dynamic.Core.xml",
+        "lib/net452/System.Linq.Dynamic.Core.dll",
+        "lib/net452/System.Linq.Dynamic.Core.xml",
+        "lib/net46/System.Linq.Dynamic.Core.dll",
+        "lib/net46/System.Linq.Dynamic.Core.xml",
+        "lib/net461/System.Linq.Dynamic.Core.dll",
+        "lib/net461/System.Linq.Dynamic.Core.xml",
+        "lib/netcore45/System.Linq.Dynamic.Core.dll",
+        "lib/netcore45/System.Linq.Dynamic.Core.xml",
+        "lib/netcore451/System.Linq.Dynamic.Core.dll",
+        "lib/netcore451/System.Linq.Dynamic.Core.xml",
+        "lib/netcore50/System.Linq.Dynamic.Core.dll",
+        "lib/netcore50/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.xml",
+        "lib/sl50/System.Linq.Dynamic.Core.dll",
+        "lib/sl50/System.Linq.Dynamic.Core.xml",
+        "lib/uap10.0/System.Linq.Dynamic.Core.dll",
+        "lib/uap10.0/System.Linq.Dynamic.Core.xml",
+        "system.linq.dynamic.core.1.0.6.8.nupkg.sha512",
+        "system.linq.dynamic.core.nuspec"
       ]
     },
     "System.Linq.Expressions/4.3.0": {
@@ -13172,30 +13374,23 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
-    },
-    "Library.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Entities/Library.Domain.csproj",
-      "msbuildProject": "../Entities/Library.Domain.csproj"
-    },
-    "Library.Service/1.0.0": {
-      "type": "project",
-      "path": "../Library.DataAccess/Library.Service.csproj",
-      "msbuildProject": "../Library.DataAccess/Library.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "AutoMapper >= 6.2.1",
-      "Library.Domain >= 1.0.0",
-      "Library.Service >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
+      "Microsoft.EntityFrameworkCore.Design >= 2.0.1",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.1",
+      "Microsoft.EntityFrameworkCore.Tools >= 2.0.1",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.0",
+      "NLog.Web.AspNetCore >= 4.5.0-rc1",
+      "System.Linq.Dynamic.Core >= 1.0.6.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DGreen\\.nuget\\packages\\": {},
+    "C:\\Users\\PPT-DEV-02\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -13204,17 +13399,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Library.API\\Library.API.csproj",
+      "projectUniqueName": "C:\\Users\\PPT-DEV-02\\OneDrive\\Library.API\\Library.API\\Library.API.csproj",
       "projectName": "Library.API",
-      "projectPath": "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Library.API\\Library.API.csproj",
-      "packagesPath": "C:\\Users\\DGreen\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Library.API\\obj\\",
+      "projectPath": "C:\\Users\\PPT-DEV-02\\OneDrive\\Library.API\\Library.API\\Library.API.csproj",
+      "packagesPath": "C:\\Users\\PPT-DEV-02\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\PPT-DEV-02\\OneDrive\\Library.API\\Library.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\DGreen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PPT-DEV-02\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13226,14 +13421,7 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {
-            "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Entities\\Library.Domain.csproj": {
-              "projectPath": "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Entities\\Library.Domain.csproj"
-            },
-            "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Library.DataAccess\\Library.Service.csproj": {
-              "projectPath": "C:\\Projects\\Dev\\ASP.NET Core\\Library.API\\Library.DataAccess\\Library.Service.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -13245,14 +13433,34 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "NLog.Web.AspNetCore": {
+            "target": "Package",
+            "version": "4.5.0-rc1"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "target": "Package",
+            "version": "2.0.1"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "2.0.0"
           },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "target": "Package",
+            "version": "2.0.1"
+          },
+          "System.Linq.Dynamic.Core": {
+            "target": "Package",
+            "version": "1.0.6.8"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
+            "version": "2.0",
             "autoReferenced": true
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "2.0.1"
           },
           "AutoMapper": {
             "target": "Package",
